@@ -7,7 +7,7 @@
         src="../assets/me.png"
         alt=""
         srcset=""
-        class="aspect-square border-secondary border-2 border-solid object-cover max-h-[10rem] w-full rounded-full lg:max-h-max"
+        class="aspect-square border-lightSecondary dark:border-secondary border-2 border-solid object-cover max-h-[10rem] w-full rounded-full lg:max-h-max"
       />
     </div>
     <div class="section lg:w-2/3 welcome-text text-left">

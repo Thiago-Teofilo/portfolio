@@ -13,41 +13,41 @@ export const SKILLS = [
   {
     title: 'HTML5',
     component: Html5Icon,
-    color: '#E34F26', // Cor do logo HTML5
+    logoClasses: 'text-[#E34F26]',
   },
   {
     title: 'CSS3',
     component: Css3Icon,
-    color: '#1572B6', // Cor do logo CSS3
+    logoClasses: 'text-[#1572B6]',
   },
   {
     title: 'JavaScript',
     component: JavaScriptIcon,
-    color: '#F7DF1E', // Cor do logo JavaScript
+    logoClasses: 'text-[#d8aa00] dark:text-[#F7DF1E]',
   },
   {
     title: 'TypeScript',
     component: TypeScriptIcon,
-    color: '#3178C6', // Cor do logo TypeScript
+    logoClasses: 'text-[#3178C6]',
   },
   {
     title: 'Vue.js',
     component: VueDotjsIcon,
-    color: '#42b883', // Cor do logo Vue.js
+    logoClasses: 'text-[#1c9112] dark:text-[#42B883]',
   },
   {
     title: 'Tailwind CSS',
     component: TailwindCssIcon,
-    color: '#06B6D4', // Cor do logo Tailwind CSS
+    logoClasses: 'text-[#06B6D4]',
   },
   {
     title: 'NestJS',
     component: NestJsIcon,
-    color: '#E0234E', // Cor do logo NestJS
+    logoClasses: 'text-[#E0234E]',
   },
   {
     title: 'PostgreSQL',
     component: PostgreSqlIcon,
-    color: '#336791', // Cor do logo PostgreSQL
+    logoClasses: 'text-[#336791]',
   },
 ];

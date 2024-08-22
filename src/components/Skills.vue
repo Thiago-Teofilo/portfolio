@@ -9,8 +9,7 @@
       <div
         v-for="(cardData, index) in skillCards"
         :key="index"
-        class="skill-card"
-        :style="{ color: cardData.color }"
+        :class="['skill-card', cardData.logoClasses]"
       >
         <component :is="cardData.component" />
         <p>{{ cardData.title }}</p>
@@ -31,7 +30,7 @@ const skillCards = SKILLS;
 }
 
 .skill-card:hover {
-  @apply bg-primary;
+  @apply bg-lightSecondary dark:bg-primary;
 }
 
 .skill-card:nth-child(7) {

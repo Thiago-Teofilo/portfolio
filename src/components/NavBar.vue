@@ -25,7 +25,13 @@
           :checked="themeStore.isLightTheme"
           @change="themeStore.toggleTheme"
         />
-        <span class="slider"></span>
+        <span class="slider">
+          <div>
+            <FontAwesomeIcon
+              :icon="['fas', !themeStore.isLightTheme ? 'moon' : 'sun']"
+            />
+          </div>
+        </span>
       </label>
     </div>
   </div>
@@ -34,6 +40,7 @@
 <script setup lang="ts">
 import { useThemeStore } from '@/store/theme';
 import { onBeforeUnmount, onMounted, ref } from 'vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 const toggleMenu = ref(false);
 const themeStore = useThemeStore();
@@ -57,7 +64,7 @@ onBeforeUnmount(() => {
 
 <style lang="postcss" scoped>
 .navbar {
-  @apply fixed shadow-lg w-full left-0 top-0 h-12 z-20 bg-lightPrimary dark:bg-primary;
+  @apply fixed shadow-lg w-full left-0 top-0 lg:h-20 h-12 z-20 bg-lightPrimary dark:bg-primary;
 }
 
 .navbar .content {
@@ -72,9 +79,8 @@ onBeforeUnmount(() => {
   @apply cursor-pointer;
 }
 
-.navbar,
-.toggle-menu .menu {
-  @apply border-b border-solid border-lightSecondary dark:border-secondary;
+.navbar {
+  @apply border-b pb-[1px] border-solid border-lightSecondary dark:border-secondary;
 }
 
 .toggle-menu .menu {
@@ -92,7 +98,7 @@ onBeforeUnmount(() => {
 .toggle-menu .menu li::before {
   content: '';
   @apply absolute transition-all bg-primary dark:bg-tertiary 
-    h-0.5 w-0 -bottom-4 left-0;
+    h-0.5 w-0 -bottom-4 lg:-bottom-8 left-0;
 }
 
 .toggle-menu .menu li:hover::before {
@@ -110,19 +116,18 @@ onBeforeUnmount(() => {
 }
 
 .slider {
-  @apply w-10 h-6 bg-secondary relative rounded-full transition-all;
+  @apply w-10 h-6 lg:w-11 lg:h-7 bg-secondary relative rounded-full transition-all;
 }
 
 input:checked ~ .slider {
   @apply bg-tertiary;
 }
 
-.slider:before {
-  @apply absolute top-[2.2px] left-0 w-5 h-5 bg-white rounded-full shadow-lg transform transition-transform;
-  content: '';
+.slider div {
+  @apply lg:h-6 absolute top-[2.2px] left-0 lg:w-6 w-5 h-5 bg-white text-primary rounded-full shadow-lg transform transition-transform;
 }
 
-input:checked ~ .slider:before {
+input:checked ~ .slider div {
   @apply translate-x-full;
 }
 
