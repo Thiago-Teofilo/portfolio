@@ -26,10 +26,9 @@
           @change="themeStore.toggleTheme"
         />
         <span class="slider">
-          <div>
-            <FontAwesomeIcon
-              :icon="['fas', !themeStore.isLightTheme ? 'moon' : 'sun']"
-            />
+          <div class="grid justify-center content-center">
+            <PiSunBold v-if="themeStore.isLightTheme" />
+            <PiMoonBold v-else />
           </div>
         </span>
       </label>
@@ -40,7 +39,7 @@
 <script setup lang="ts">
 import { useThemeStore } from '@/store/theme';
 import { onBeforeUnmount, onMounted, ref } from 'vue';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { PiMoonBold, PiSunBold } from 'vue3-icons/pi';
 
 const toggleMenu = ref(false);
 const themeStore = useThemeStore();
@@ -116,11 +115,11 @@ onBeforeUnmount(() => {
 }
 
 .slider {
-  @apply w-10 h-6 lg:w-11 lg:h-7 bg-secondary relative rounded-full transition-all;
+  @apply w-10 h-6 lg:w-16 lg:h-7 bg-secondary relative rounded-full transition-all;
 }
 
 input:checked ~ .slider {
-  @apply bg-tertiary;
+  @apply bg-lightSecondary;
 }
 
 .slider div {
@@ -128,7 +127,7 @@ input:checked ~ .slider {
 }
 
 input:checked ~ .slider div {
-  @apply translate-x-full;
+  @apply translate-x-full lg:translate-x-10;
 }
 
 /* Efeito do Ícone de Toggle Menu */

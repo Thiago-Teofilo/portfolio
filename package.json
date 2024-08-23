@@ -19,6 +19,7 @@
     "simple-icons": "^11.14.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
+    "vue3-icons": "^0.1.13",
     "vue3-simple-icons": "^11.13.0",
     "vuex": "^4.0.0"
   },
