@@ -7,6 +7,7 @@ import {
   Html5Icon,
   Css3Icon,
   TailwindCssIcon,
+  ReactIcon,
 } from 'vue3-simple-icons';
 
 export const SKILLS = [
@@ -34,6 +35,11 @@ export const SKILLS = [
     title: 'Vue.js',
     component: VueDotjsIcon,
     logoClasses: 'text-[#1c9112] dark:text-[#42B883]',
+  },
+  {
+    title: 'React',
+    component: ReactIcon,
+    logoClasses: 'text-[#61DAFB]',
   },
   {
     title: 'Tailwind CSS',
