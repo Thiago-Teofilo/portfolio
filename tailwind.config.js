@@ -12,12 +12,14 @@ module.exports = {
       // Cores para o tema escuro
       primary: '#141816',
       secondary: '#29312D',
+      'secondary-alt': '#4a5b53',
       tertiary: '#13ab45',
       white: '#e5e5e5',
       'pure-white': '#ffff',
       // Cores para o tema claro (light)
       lightPrimary: '#e5e5e5',
       lightSecondary: '#d3d3d3',
+      lightSecondaryAlt: '#b5b5b5',
     },
   },
   plugins: [],

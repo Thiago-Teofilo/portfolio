@@ -14,6 +14,7 @@
                 <li><a href="#welcome">Início</a></li>
                 <li><a href="#resume">Sobre mim</a></li>
                 <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#project-list">Projetos</a></li>
               </ul>
             </div>
           </transition>

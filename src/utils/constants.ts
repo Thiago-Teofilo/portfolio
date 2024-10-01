@@ -39,7 +39,7 @@ export const SKILLS = [
   {
     title: 'React',
     component: ReactIcon,
-    logoClasses: 'text-[#61DAFB]',
+    logoClasses: 'text-[#3178C6] dark:text-[#61DAFB]',
   },
   {
     title: 'Tailwind CSS',
@@ -55,5 +55,21 @@ export const SKILLS = [
     title: 'PostgreSQL',
     component: PostgreSqlIcon,
     logoClasses: 'text-[#336791]',
+  },
+];
+
+export const PROJECTS = [
+  {
+    url: 'https://to-do-list-gules-three-33.vercel.app/',
+    name: 'To-do List',
+    description: `
+      Aplicativo de tarefas permite que o usuário crie, 
+      armazene, conclua e exclua tarefas de forma simples 
+      e rápida. Com uma interface intuitiva, é fácil 
+      organizar atividades, marcar tarefas concluídas e 
+      remover as que não são mais necessárias, mantendo o 
+      foco e a produtividade. Esse projeto foi desenvolvido
+      em React, TypeScript e Vite.`,
+    image: 'todo-thumb.png',
   },
 ];

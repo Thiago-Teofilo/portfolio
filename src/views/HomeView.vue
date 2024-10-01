@@ -4,6 +4,7 @@
     <Welcome />
     <Resume />
     <Skills />
+    <ProjectList />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Welcome from '@/components/Welcome.vue';
 import Resume from '@/components/Resume.vue';
 import Skills from '@/components/Skills.vue';
 import NavBar from '@/components/NavBar.vue';
+import ProjectList from '@/components/ProjectList.vue';
 </script>
 
 <style lang="postcss">
