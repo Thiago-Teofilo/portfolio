@@ -61,15 +61,13 @@ export const SKILLS = [
 export const PROJECTS = [
   {
     url: 'https://to-do-list-gules-three-33.vercel.app/',
-    name: 'To-do List',
+    name: 'Todo List',
     description: `
-      Aplicativo de tarefas permite que o usuário crie, 
-      armazene, conclua e exclua tarefas de forma simples 
-      e rápida. Com uma interface intuitiva, é fácil 
-      organizar atividades, marcar tarefas concluídas e 
-      remover as que não são mais necessárias, mantendo o 
-      foco e a produtividade. Esse projeto foi desenvolvido
-      em React, TypeScript e Vite.`,
+        Aplicativo de gerenciamento de tarefas feito em React, Vite e TypeScript
+      `,
     image: 'todo-thumb.png',
+    mobileImage: 'todo-thumb-2.png',
+    imageWrapperClasses: 'bg-[#1E6F9F]',
+    imageClasses: 'border-[#1E6F9F]',
   },
 ];

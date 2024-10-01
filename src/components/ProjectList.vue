@@ -3,12 +3,20 @@
     <div class="section">
       <h2 class="title">Projetos</h2>
     </div>
-    <div class="section grid my-5 justify-items-center">
+    <div class="section grid gap-4 my-5 justify-items-center">
       <div v-for="(project, i) in PROJECTS" :key="i" class="project-card">
         <a :href="project.url" target="_blank">
-          <img :src="getImageUrl(project.image)" alt="" />
+          <div :class="['images p-4 rounded', project.imageWrapperClasses]">
+            <img :src="getImageUrl(project.image)" alt="" />
+            <img
+              v-if="project.mobileImage"
+              :src="getImageUrl(project.mobileImage)"
+              :class="[project.imageClasses]"
+              alt=""
+            />
+          </div>
           <div class="project-content">
-            <h3>{{ project.name }}</h3>
+            <h4>{{ project.name }}</h4>
             <p>{{ project.description }}</p>
           </div>
         </a>
@@ -27,30 +35,30 @@ function getImageUrl(imageName: string) {
 
 <style lang="postcss" scoped>
 .project-card {
-  @apply max-w-[60rem];
+  @apply w-[calc(50%-1rem)] transition-colors border border-solid border-lightSecondary dark:border-secondary p-4 rounded-lg bg-lightSecondary dark:bg-secondary;
 }
 
-.project-card a {
-  @apply border-2 border-solid transition-colors border-lightSecondary dark:border-secondary p-4 rounded-lg;
-}
-
-.project-card img {
-  @apply rounded-lg;
-}
-
-.project-card:hover a {
+.project-card:hover {
   @apply border-lightSecondaryAlt dark:border-secondary-alt;
 }
 
-.project-card a {
-  @apply grid md:grid-cols-2;
+.project-card img {
+  @apply rounded;
 }
 
-.project-card .project-content {
-  @apply px-4;
+.project-card .images {
+  @apply relative;
 }
 
-.project-card .project-content h3 {
-  @apply text-left;
+.project-card img:last-child {
+  @apply absolute w-20 bottom-1 right-1 border-4 border-solid;
+}
+
+.project-card h4 {
+  @apply text-left mb-2;
+}
+
+.project-card p {
+  @apply mt-0;
 }
 </style>
