@@ -69,5 +69,6 @@ export const PROJECTS = [
     mobileImage: 'todo-thumb-2.png',
     imageWrapperClasses: 'bg-[#1E6F9F]',
     imageClasses: 'border-[#1E6F9F]',
+    brandColor: '#1E6F9F',
   },
 ];
