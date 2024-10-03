@@ -10,7 +10,7 @@
         :class="['skill-card', cardData.logoClasses]"
       >
         <component :is="cardData.component" />
-        <p>{{ cardData.title }}</p>
+        <p class="font-bold">{{ cardData.title }}</p>
       </div>
     </div>
   </div>

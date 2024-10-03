@@ -38,15 +38,15 @@ function getImageUrl(imageName: string) {
 
 <style lang="postcss" scoped>
 .project-card {
-  @apply w-full border-b-2 border-solid sm:w-[calc(50%-1rem)] 2xl:w-[calc(33.3%-1rem)] transition-colors p-4 rounded-t bg-lightSecondary dark:bg-secondary;
+  @apply shadow-[0_-1px_1px_1px] shadow-lightSecondary dark:shadow-secondary w-full border-b-2 border-solid sm:w-[calc(50%-1rem)] 2xl:w-[calc(33.3%-1rem)] transition-colors p-4 rounded-t bg-lightPrimary dark:bg-primary;
 }
 
 .project-card:hover {
-  @apply bg-lightPrimary dark:bg-primary;
+  @apply bg-lightSecondary dark:bg-secondary;
 }
 
 .project-card .images {
-  @apply relative p-4 pl-1 pr-5 rounded;
+  @apply relative p-4 pl-2 pr-6 rounded;
 }
 
 .project-card img {
@@ -54,14 +54,14 @@ function getImageUrl(imageName: string) {
 }
 
 .project-card img:last-child {
-  @apply absolute w-[23%] -bottom-0 right-0 border-4 border-solid;
+  @apply absolute w-[23%] bottom-2 right-1 border-4 border-solid;
 }
 
 .project-card strong {
-  @apply text-left w-full block my-4 font-bold;
+  @apply w-full block my-2 font-secondary text-left font-bold text-sm lg:text-lg;
 }
 
 .project-card p {
-  @apply mt-0 text-left;
+  @apply text-left my-0;
 }
 </style>
