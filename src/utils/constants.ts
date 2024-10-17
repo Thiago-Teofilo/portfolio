@@ -67,8 +67,20 @@ export const PROJECTS = [
       `,
     image: 'todo-thumb.png',
     mobileImage: 'todo-thumb-2.png',
-    imageWrapperClasses: 'bg-[#1E6F9F]',
-    imageClasses: 'border-[#1E6F9F]',
-    brandColor: '#1E6F9F',
+    imageWrapperClasses: 'bg-secondary',
+    imageClasses: 'border-secondary',
+    brandColor: 'secondary',
+  },
+  {
+    url: 'https://ignite-feed-frontend-thiago-teofilos-projects.vercel.app/',
+    name: 'Ignite Feed',
+    description: `
+        Aplicativo blog feito em React, Vite, TypeScript e uma API integrada feita em NestJS com um banco de dados PostgreSQL
+      `,
+    image: 'ignite-feed-thumb.png',
+    mobileImage: 'ignite-feed-thumb-2.png',
+    imageWrapperClasses: 'bg-secondary',
+    imageClasses: 'border-secondary',
+    brandColor: 'secondary',
   },
 ];

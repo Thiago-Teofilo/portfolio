@@ -3,7 +3,7 @@
     <div class="section">
       <h2 class="title">Habilidades</h2>
     </div>
-    <div class="section my-5 gap-4 flex flex-wrap">
+    <div class="section my-5 gap-4 flex flex-wrap justify-items-center">
       <div
         v-for="(cardData, index) in skillCards"
         :key="index"
@@ -24,7 +24,7 @@ const skillCards = SKILLS;
 
 <style lang="postcss">
 .skill-card {
-  @apply cursor-pointer shadow-lg transition border-b-2 bg-pure-white dark:bg-secondary border-solid rounded-tr-2xl grid justify-items-center gap-2 p-4 w-[calc(50%-1rem)] md:w-[calc(33%-1rem)] lg:w-[calc(25%-1rem)];
+  @apply cursor-pointer mx-auto shadow-lg transition border-b-2 bg-pure-white dark:bg-secondary border-solid rounded-tr-2xl grid justify-items-center gap-2 p-4 w-[calc(50%-1rem)] md:w-[calc(33%-1rem)] lg:w-[calc(25%-1rem)];
 }
 
 .skill-card:hover {

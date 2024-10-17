@@ -3,20 +3,14 @@
     <div class="section">
       <h2 class="title">Projetos</h2>
     </div>
-    <div class="section grid gap-4 my-5 justify-items-center">
-      <div
-        v-for="(project, i) in PROJECTS"
-        :key="i"
-        :class="['project-card', `border-[${project.brandColor}]`]"
-      >
+    <div
+      class="section grid gap-4 my-5 2xl:grid-cols-3 sm:grid-cols-2 justify-items-center"
+    >
+      <div v-for="(project, i) in PROJECTS" :key="i" class="project-card">
         <a :href="project.url" target="_blank">
-          <div :class="['images', project.imageWrapperClasses]">
+          <div class="images">
             <img :src="getImageUrl(project.image)" alt="" />
-            <img
-              :src="getImageUrl(project.mobileImage)"
-              :class="[project.imageClasses]"
-              alt=""
-            />
+            <img :src="getImageUrl(project.mobileImage)" alt="" />
           </div>
           <div class="project-content">
             <strong>{{ project.name }}</strong>
@@ -38,15 +32,15 @@ function getImageUrl(imageName: string) {
 
 <style lang="postcss" scoped>
 .project-card {
-  @apply shadow-[0_-1px_1px_1px] shadow-lightSecondary dark:shadow-secondary w-full border-b-2 border-solid sm:w-[calc(50%-1rem)] 2xl:w-[calc(33.3%-1rem)] transition-colors p-4 rounded-t bg-lightPrimary dark:bg-primary;
+  @apply w-full transition-colors p-4 rounded bg-lightPrimary dark:bg-primary;
 }
 
 .project-card:hover {
-  @apply bg-lightSecondary dark:bg-secondary;
+  @apply bg-lightSecondary dark:bg-primary-alt dark:shadow-primary-alt;
 }
 
 .project-card .images {
-  @apply relative p-4 pl-2 pr-6 rounded;
+  @apply relative p-4 pl-2 pr-6 rounded bg-lightSecondary dark:bg-primary-alt;
 }
 
 .project-card img {
@@ -54,11 +48,11 @@ function getImageUrl(imageName: string) {
 }
 
 .project-card img:last-child {
-  @apply absolute w-[23%] bottom-2 right-1 border-4 border-solid;
+  @apply absolute w-[23%] bottom-2 right-1 border-4 border-solid border-lightSecondary dark:border-primary-alt;
 }
 
 .project-card strong {
-  @apply w-full block my-2 font-secondary text-left font-bold text-sm lg:text-lg;
+  @apply w-full block my-4 text-left font-bold text-sm lg:text-lg;
 }
 
 .project-card p {
