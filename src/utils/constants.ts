@@ -83,4 +83,16 @@ export const PROJECTS = [
     imageClasses: 'border-secondary',
     brandColor: 'secondary',
   },
+  {
+    url: 'https://ignite-timer-frontend.vercel.app/',
+    name: 'Ignite Timer',
+    description: `
+      Aplicativo de cronometragem feito em React que se aprofunda em hooks, como useReducer e useContext.
+    `,
+    image: 'ignite-timer-thumb.png',
+    mobileImage: 'ignite-timer-thumb-2.png',
+    imageWrapperClasses: 'bg-secondary',
+    imageClasses: 'border-secondary',
+    brandColor: 'secondary',
+  },
 ];
