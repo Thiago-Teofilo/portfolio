@@ -40,6 +40,6 @@ const skillCards = SKILLS;
 }
 
 .skill-card p {
-  @apply my-auto;
+  @apply my-auto text-center;
 }
 </style>

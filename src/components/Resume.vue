@@ -5,12 +5,12 @@
     </div>
     <div class="section">
       <p>
-        Durante meu tempo na MultiBombas, de setembro de 2023 a março de 2024,
-        liderei o desenvolvimento do Controle Integra, um sistema revolucionário
-        para fabricantes de bombas industriais. Este projeto envolveu a
-        construção de uma API robusta utilizando frameworks em Node.js e uma
-        interface intuitiva, além da integração com um banco de dados PostgreSQL
-        para garantir um armazenamento de dados seguro e eficiente.
+        Durante meu tempo na MultiBombas, liderei o desenvolvimento do Controle
+        Integra, um sistema revolucionário para fabricantes de bombas
+        industriais. Este projeto envolveu a construção de uma API robusta
+        utilizando frameworks em Node.js e uma interface intuitiva, além da
+        integração com um banco de dados PostgreSQL para garantir um
+        armazenamento de dados seguro e eficiente.
       </p>
       <p>
         Atualmente, estou trabalhando na atualização da interface e da API de um

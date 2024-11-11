@@ -7,27 +7,43 @@
       class="section grid gap-4 my-5 2xl:grid-cols-3 sm:grid-cols-2 justify-items-center"
     >
       <div v-for="(project, i) in PROJECTS" :key="i" class="project-card">
-        <a :href="project.url" target="_blank">
-          <div class="images">
-            <img :src="getImageUrl(project.image)" alt="" />
-            <img :src="getImageUrl(project.mobileImage)" alt="" />
-          </div>
+        <div @click="() => handleOpenModal(project)">
+          <ProjectImages
+            :primary-image-name="project.image"
+            :mobile-image-name="project.mobileImage"
+          />
           <div class="project-content">
             <strong>{{ project.name }}</strong>
-            <p>{{ project.description }}</p>
           </div>
-        </a>
+        </div>
       </div>
     </div>
+    <ProjectModal
+      :is-visible="showModal"
+      :project="selectedProject"
+      @close="handleCloseModal"
+    />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { PROJECTS } from '@/utils/constants';
+import { IProject, PROJECTS } from '@/utils/constants';
+import { ref } from 'vue';
+import ProjectModal from './ProjectModal.vue';
+import ProjectImages from './ProjectImages.vue';
 
-function getImageUrl(imageName: string) {
-  return require(`@/assets/thumb/${imageName}`);
+function handleCloseModal() {
+  selectedProject.value = null;
+  showModal.value = !showModal.value;
 }
+
+function handleOpenModal(project: IProject) {
+  selectedProject.value = project;
+  showModal.value = !showModal.value;
+}
+
+const selectedProject = ref<IProject | null>(null);
+const showModal = ref(false);
 </script>
 
 <style lang="postcss" scoped>
@@ -37,18 +53,6 @@ function getImageUrl(imageName: string) {
 
 .project-card:hover {
   @apply bg-lightSecondary dark:bg-primary-alt dark:shadow-primary-alt;
-}
-
-.project-card .images {
-  @apply relative p-4 pl-2 pr-6 rounded bg-lightSecondary dark:bg-primary-alt;
-}
-
-.project-card img {
-  @apply rounded;
-}
-
-.project-card img:last-child {
-  @apply absolute w-[23%] bottom-2 right-1 border-4 border-solid border-lightSecondary dark:border-primary-alt;
 }
 
 .project-card strong {

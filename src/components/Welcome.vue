@@ -4,7 +4,7 @@
       class="section welcome-image self-end lg:!w-1/3 relative h-max !w-max mx-auto"
     >
       <img
-        src="../assets/me.png"
+        src="../assets/me.jpeg"
         alt=""
         srcset=""
         class="aspect-square border-lightSecondary dark:border-secondary border-2 border-solid object-cover max-h-[10rem] w-full rounded-full lg:max-h-max"
@@ -20,9 +20,9 @@
       </h1>
       <h2 class="title">Desenvolvedor Full stack</h2>
       <p>
-        Sou especialista em Node.js e formado em Análise e Desenvolvimento de
-        Sistemas, trabalhando com desenvolvimento de software desde 2023. Gosto
-        de explorar novas tecnologias e compartilhar conhecimento.
+        Sou formado em Análise e Desenvolvimento de Sistemas, trabalhando com
+        desenvolvimento de software desde 2021. Gosto de explorar novas
+        tecnologias e compartilhar conhecimento.
       </p>
       <div class="additional-info uppercase">
         <div class="social-media mt-10">

@@ -2,29 +2,19 @@ import {
   VueDotjsIcon,
   TypeScriptIcon,
   NestJsIcon,
-  JavaScriptIcon,
   PostgreSqlIcon,
-  Html5Icon,
-  Css3Icon,
   TailwindCssIcon,
   ReactIcon,
+  NodeDotjsIcon,
+  GoogleCloudIcon,
+  ShadcnuiIcon,
 } from 'vue3-simple-icons';
 
 export const SKILLS = [
   {
-    title: 'HTML5',
-    component: Html5Icon,
-    logoClasses: 'text-[#E34F26]',
-  },
-  {
-    title: 'CSS3',
-    component: Css3Icon,
-    logoClasses: 'text-[#1572B6]',
-  },
-  {
-    title: 'JavaScript',
-    component: JavaScriptIcon,
-    logoClasses: 'text-[#d8aa00] dark:text-[#F7DF1E]',
+    title: 'Google Cloud Platform',
+    component: GoogleCloudIcon,
+    logoClasses: 'text-[#db4a39]',
   },
   {
     title: 'TypeScript',
@@ -32,9 +22,14 @@ export const SKILLS = [
     logoClasses: 'text-[#3178C6]',
   },
   {
-    title: 'Vue.js',
-    component: VueDotjsIcon,
-    logoClasses: 'text-[#1c9112] dark:text-[#42B883]',
+    title: 'NestJS',
+    component: NestJsIcon,
+    logoClasses: 'text-[#E0234E]',
+  },
+  {
+    title: 'Node.js',
+    component: NodeDotjsIcon,
+    logoClasses: 'text-[#3C873A]',
   },
   {
     title: 'React',
@@ -42,14 +37,18 @@ export const SKILLS = [
     logoClasses: 'text-[#3178C6] dark:text-[#61DAFB]',
   },
   {
+    title: 'Shadcn UI',
+    component: ShadcnuiIcon,
+  },
+  {
+    title: 'Vue.js',
+    component: VueDotjsIcon,
+    logoClasses: 'text-[#1c9112] dark:text-[#42B883]',
+  },
+  {
     title: 'Tailwind CSS',
     component: TailwindCssIcon,
     logoClasses: 'text-[#06B6D4]',
-  },
-  {
-    title: 'NestJS',
-    component: NestJsIcon,
-    logoClasses: 'text-[#E0234E]',
   },
   {
     title: 'PostgreSQL',
@@ -58,7 +57,17 @@ export const SKILLS = [
   },
 ];
 
-export const PROJECTS = [
+export interface IProject {
+  url?: string | null;
+  name: string;
+  description: string;
+  image: string;
+  mobileImage: string;
+  backendRepositoryUrl?: string | null;
+  frontendRepositoryUrl?: string | null;
+}
+
+export const PROJECTS: IProject[] = [
   {
     url: 'https://to-do-list-gules-three-33.vercel.app/',
     name: 'Todo List',
@@ -67,9 +76,7 @@ export const PROJECTS = [
       `,
     image: 'todo-thumb.png',
     mobileImage: 'todo-thumb-2.png',
-    imageWrapperClasses: 'bg-secondary',
-    imageClasses: 'border-secondary',
-    brandColor: 'secondary',
+    frontendRepositoryUrl: 'https://github.com/Thiago-Teofilo/to-do-list',
   },
   {
     url: 'https://ignite-feed-frontend-thiago-teofilos-projects.vercel.app/',
@@ -79,9 +86,10 @@ export const PROJECTS = [
       `,
     image: 'ignite-feed-thumb.png',
     mobileImage: 'ignite-feed-thumb-2.png',
-    imageWrapperClasses: 'bg-secondary',
-    imageClasses: 'border-secondary',
-    brandColor: 'secondary',
+    backendRepositoryUrl:
+      'https://github.com/Thiago-Teofilo/ignite-feed-backend',
+    frontendRepositoryUrl:
+      'https://github.com/Thiago-Teofilo/ignite-feed-frontend',
   },
   {
     url: 'https://ignite-timer-frontend.vercel.app/',
@@ -91,8 +99,9 @@ export const PROJECTS = [
     `,
     image: 'ignite-timer-thumb.png',
     mobileImage: 'ignite-timer-thumb-2.png',
-    imageWrapperClasses: 'bg-secondary',
-    imageClasses: 'border-secondary',
-    brandColor: 'secondary',
+    backendRepositoryUrl:
+      'https://github.com/Thiago-Teofilo/ignite-timer-backend',
+    frontendRepositoryUrl:
+      'https://github.com/Thiago-Teofilo/ignite-timer-frontend',
   },
 ];
